@@ -3,20 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	var s string
-	const a = " "
-	const b = "#"
 
-	s = ` # # # #
-# # # #
- # # # #
-# # # #`
+	x, y := "#", " "
 
-	println(s) // Вариант 1
-
-	fmt.Println(a, b, a, b, a, b, a, b) // Вариант 2
-	fmt.Println(b, a, b, a, b, a, b, a)
-	fmt.Println(a, b, a, b, a, b, a, b)
-	fmt.Println(b, a, b, a, b, a, b, a)
-
+	for i := 0; i < 8; i++ {
+		for j := 0; j < 4; j++ {
+			fmt.Print(x, y)
+		}
+		fmt.Println()
+	}
 }
